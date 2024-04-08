@@ -1,17 +1,23 @@
 type LinkPropTypes = {
-	text: string;
+	text?: string;
+	shouldOpenNewWindow: boolean;
 };
 
-function Link({ text }: LinkPropTypes) {
-	const address = 'https://zrozumiecreact.pl';
+const address = 'https://zrozumiecreact.pl';
+
+function Link(props: LinkPropTypes) {
+	const { text = address, shouldOpenNewWindow } = props;
+
+	const target = shouldOpenNewWindow ? '_blank' : '';
+	const rel = shouldOpenNewWindow ? 'noopener noreferrer' : '';
 
 	return (
 		<a
 			href={address}
-			target='_blank'
-			rel='noopener noreferrer'
+			target={target}
+			rel={rel}
 		>
-			{text} {address}
+			{text}
 		</a>
 	);
 }

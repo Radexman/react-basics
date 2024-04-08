@@ -10,13 +10,16 @@ const element = (
 				voluptate. Commodi qui repellat illo debitis delectus sequi quasi quod sapiente. Perspiciatis tenetur
 				quaerat corrupti perferendis laborum minus libero velit tempora ut modi!
 			</p>
-			<Link text='Super Strona Kursu' />
+			<Link
+				text='Sprawdź stronę kursu'
+				shouldOpenNewWindow={true}
+			/>
 			<p>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quod odit suscipit cumque sint enim in
 				voluptate. Commodi qui repellat illo debitis delectus sequi quasi quod sapiente. Perspiciatis tenetur
 				quaerat corrupti perferendis laborum minus libero velit tempora ut modi!
 			</p>
-			<Link text='Fajna Strona Kursu' />
+			<Link shouldOpenNewWindow={false} />
 		</main>
 	</>
 );
